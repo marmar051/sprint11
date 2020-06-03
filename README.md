@@ -1,7 +1,9 @@
 # Спринт 11 - работа с webpack
 
 ## Введение
-Ссыдка на готовый проект: https://marmar051.github.io/sprint11[4]
+
+Ссылка на готовый проект: https://marmar051.github.io/sprint11
+
 
 
 ## В этом проекте:
