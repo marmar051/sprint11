@@ -2,8 +2,9 @@
 
 export class Api {
 
-  constructor (formEdit){
+  constructor (formEdit, serverUrl){
     this.formEdit = formEdit;
+    this.serverUrl = serverUrl
   }
 
   actualUserInfo(){
@@ -13,7 +14,7 @@ export class Api {
     При этом итоговый адрес запроса собирается из адреса сервера и адреса ендпоинта:
     например fetch(`${this.baseUrl}/cards`
   */
-    return fetch(`https://praktikum.tk/cohort10/users/me`, {
+    return fetch(`${this.serverUrl}/users/me`, {
       headers: {
         authorization: '6bf1ae05-1d90-4bff-acfd-cfd65cd2f67f'
       }
@@ -59,7 +60,7 @@ export class Api {
           })
   }
   // getCards() {
-  //   fetch(`https://praktikum.tk/cohort10/cards`, {
+  //   fetch(`${this.serverUrl}/cards`, {
   //     headers: {
   //       authorization: '6bf1ae05-1d90-4bff-acfd-cfd65cd2f67f'
   //     }
@@ -77,7 +78,7 @@ export class Api {
   //   });
   // }
   updateUserInfo(){
-    return fetch('https://praktikum.tk/cohort10/users/me', {
+    return fetch('${this.serverUrl}/users/me', {
       method: 'PATCH',
       headers: {
         authorization: '6bf1ae05-1d90-4bff-acfd-cfd65cd2f67f',
