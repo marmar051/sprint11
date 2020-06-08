@@ -17,9 +17,9 @@ const popup = document.querySelector('.popup');
 const popupClosex = document.querySelector('.popup__close');
 const placesList = document.querySelector('.places-list');
 const buttonLikeCard = placesList.querySelector('.place-card__like-icon');
-
+const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk/cohort10' : 'https://praktikum.tk/cohort10';
     
-export const api = new Api(formEdit);
+export const api = new Api(formEdit, serverUrl);
 const card = new Card(placesList)
 const cardList = new CardList(placesList, form, popup, api, card);
 const userInfo = new UserInfo(formEdit, popupEdit, api)
